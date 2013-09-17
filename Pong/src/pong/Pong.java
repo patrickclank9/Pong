@@ -19,13 +19,12 @@ public class Pong extends Game {
 	
 	public Pong(){
 		
-		GRootContainer root = new GRootContainer(Color.WHITE);
+		GRootContainer root = new GRootContainer(Color.BLACK);
 		setRootContainer(root);
 		PongGameView pgv = new PongGameView();
 		GameOverView gov = new GameOverView();
 		root.addView(Views.GAME, pgv);
 		root.addView(Views.GAME_OVER, gov);
-
 	}
 	
 	
