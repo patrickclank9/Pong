@@ -2,6 +2,7 @@ package pong;
 
 import java.util.List;
 
+import jgame.Context;
 import jgame.GObject;
 import jgame.controller.ControlScheme;
 import jgame.listener.FrameListener;
@@ -39,7 +40,11 @@ public class PongGameView extends jgame.GContainer{
 
 	            // Is it empty?
 	            boolean noPucksLeft = pucks.isEmpty();
+	            if(noPucksLeft){
+	            	context.setCurrentGameView(Pong.Views.GAME_OVER);
+	            }
 	        }
 	    };
+	    addListener(fl);
 	}
 }
